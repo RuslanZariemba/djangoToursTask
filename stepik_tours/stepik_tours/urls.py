@@ -17,13 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from tours.views import main_view, departure_view, tour_view, custom_404, custom_500
+from tours.views import index_view, departure_view, tour_view, custom_404, custom_500
 
 handler404 = custom_404
 handler500 = custom_500
 
 urlpatterns = [
-    path('', main_view, name='main'),
+    path('', index_view, name='index'),
     path('departure/<str:departure>', departure_view, name='departure'),
     path('tour/<int:tour_id>', tour_view, name='tour'),
 
