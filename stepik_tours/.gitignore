@@ -1,7 +1,6 @@
 *.pyc
 *~
 *.flake8
-__init__.py
 __pycache__
 venv/
 db.sqlite3
