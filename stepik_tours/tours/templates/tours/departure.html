@@ -12,9 +12,10 @@
         {% for tour_id, tour in tours.items %}
             <div class="col-4">
             <div class="card mb-4">
-                <img src="{{tour.picture}}" height="100" class="card-img-top img-fluid" alt="">
+                <img src="{{tour.picture}}" class="card-img-top img-fluid" alt="">
                 <div class="card-body">
-                    <h2 class="h5 card-title">{{ tour.country }}: {{ tour.title }} {{tour.stars|make_stars}}</h2>
+                    <h2 class="h5 card-title">{{ tour.country }}: {{ tour.title }}</h2>
+                    <p><b>{{tour.stars|make_stars}}</b></p>
                     <p class="card-text">{{ tour.description|truncatechars:130 }}</p>
                     <h6>{{tour.date}}, {{tour.nights}} ночей, {{ tour.price }}p.</h6>
                     <a href="/tour/{{ tour_id }}" class="btn btn-sm btn-primary">Подробнее</a>
